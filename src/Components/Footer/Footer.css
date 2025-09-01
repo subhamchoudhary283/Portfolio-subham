@@ -1,99 +1,140 @@
- .subh{
-    font-family: "Archivo Black", sans-serif;
-    font-size: 30px;
+.subh {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 30px;
 }
 
-.footer{
-    margin: 15px 170px;
-    display: flex;
+.footer {
+  margin: 15px 170px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; /* prevents overflow */
+}
+
+.footertop-left p {
+  font-size: 20px;
+  max-width: 400px;
+}
+
+.footertop-right {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+  flex-wrap: wrap; /* ensures wrapping on small screens */
+}
+
+.footeremail-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px 20px;
+  border-radius: 50px;
+  background: #32323B;
+  flex: 1; /* takes available space */
+  min-width: 200px;
+}
+
+.footeremail-input input {
+  outline: none;
+  border: none;
+  background: transparent;
+  color: #a0a0a0;
+  font-family: Outfit;
+  font-size: 18px;
+  flex: 1; /* makes input expand */
+}
+
+.footer-subscribe {
+  font-size: 20px;
+  padding: 15px 30px;
+  border-radius: 50px;
+  background: purple;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap; /* keeps text in one line */
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  flex-wrap: wrap; /* wrap on small screens */
+}
+
+.footer-bottom-right {
+  display: flex;
+  gap: 30px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.footeremail-input:hover {
+  border: 2px solid white;
+}
+.footer-subscribe:hover {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 760px) {
+  .footer {
+    margin: 30px 20px;
+    gap: 20px;
+  }
+
+  .subh {
+    font-size: 22px; /* smaller on mobile */
+    text-align: center;
+  }
+
+  .footertop-left p {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .footer-top {
     flex-direction: column;
-    gap: 30px;
-}
-
-.footer-top{
-    display: flex;
-    justify-content: space-between;
-
-}
-
-.footertop-left p{
-    font-size: 20px;
-    max-width: 400px;
-}
-
-.footertop-right{
-    display: flex;
+    gap: 20px;
     align-items: center;
-    gap: 35px;
-}
+  }
 
-.footeremail-input{
-    display: flex;
-    gap: 30px;
-    padding: 20px 30px;
-    border-radius: 50px;
-    background: #32323B;
-    padding-right: 80px;
-}
+  .footertop-right {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+  }
 
-.footeremail-input input{
-    outline: none;
-    border: none;
-    background: transparent;
-    color: #a0a0a0;
-    font-family: Outfit;
-    font-size: 18px;
-}
+  .footeremail-input {
+    width: 75%;
+    justify-content: center;
+  }
 
-.footer-subscribe{
-    font-size: 20px;
-    padding: 22px 50px;
-    border-radius: 50px;
-    background: purple;
-    cursor: pointer;
-    transition: 0.3s;
-}
+  .footer-subscribe {
+    width: 60%;
+    text-align: center;
+  }
 
-.footer-bottom{
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-}
+  .footer-bottom {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
 
-.footer-bottom-right{
-    display: flex;
-    gap: 50px;
-    margin-bottom: 50px;
-}
+  .footer-bottom-right {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
 
-.footeremail-input:hover{
-    border: 2px solid white;
-}
-.footer-subscribe:hover{
-    transform: scale(1.10);
-    transition: 0.3s;
-}
-
-@media(max-width:760px){
-    .footer{
-        margin: 50px 70px;
-    }
-    .footer-top{
-        flex-direction: column;
-        gap: 50px;
-    }
-    .footer-bottom{
-        display: flex;
-        flex-direction: column-reverse;
-        margin-bottom: 50px;
-    }
-    .footer-bottom-right{
-        display: flex;
-        justify-content: space-between;
-    }
-    .footer-bottom-left{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+  .footer-bottom-left {
+    text-align: center;
+    font-size: 14px;
+  }
 }

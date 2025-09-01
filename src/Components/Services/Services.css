@@ -1,102 +1,140 @@
- .services{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    margin: 80px 170px;
- }
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 80px 170px;
+}
 
- .services-title{
-    position: relative;
+.services-title {
+  position: relative;
+}
 
- }
+.services-title h1 {
+  padding: 0 30px;
+  font-size: 80px;
+  font-weight: 600;
+}
 
- .services-title h1{
-    padding: 0 30px;
-    font-size: 80px;
-    font-weight: 600;
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 80px;
+}
 
- }
- .services-format{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
-    padding: 60px;
-    border-radius: 10px;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: 0.4s;
- }
+.services-format {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 60px;
+  border-radius: 10px;
+  border: 2px solid white;
+  cursor: pointer;
+  transition: 0.4s;
+}
 
- .services-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 80px;
- }
+.services-format h3 {
+  font-size: 28px;
+  font-weight: 600;
+}
 
- .services-format h3{
-    font-size: 28px;
-    font-weight: 600;
- }
+.services-format h2 {
+  font-size: 30px;
+  font-weight: 800;
+  background: rgb(141 0 195);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
- .services-format h2{
-    font-size: 30px;
-    font-weight: 800;
-    background: rgb(141 0 195);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
- }
+.services-format p { 
+  color: white;
+  font-size: 24px;
+  line-height: 40px;
+  max-height: 300px;
+}
 
- .services-format p{ 
-    color: white;
+.services-readmore {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.services-format:hover {
+  border: 2px solid rgb(178, 34, 255);
+  background-image: linear-gradient(45deg,#3f0028,#582300);
+  transform: scale(1.05);
+  transition: 0.4s;
+}
+
+/* 📲 Tablets */
+@media(max-width: 900px) {
+  .services {
+    margin: 40px 80px;
+    gap: 60px;
+  }
+
+  .services-title h1 {
+    font-size: 60px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+  }
+
+  .services-format {
+    padding: 40px;
+  }
+
+  .services-format h2 {
     font-size: 24px;
-    line-height: 40px;
-    max-height: 300px;
- }
+  }
 
- .services-readmore{
-    display: flex;
-    gap: 20px;
+  .services-format p {
+    font-size: 18px;
+    line-height: 32px;
+  }
+}
+
+/* 📱 Phones */
+@media(max-width: 600px) {
+  .services {
+    margin: 20px 30px;
+    gap: 40px;
     align-items: center;
-    margin-top: 20px;
- }
+  }
 
- .services-format:hover{
-    border: 2px solid rgb(178, 34, 255);
-    background-image: linear-gradient(45deg,#3f0028,#582300);
-    transform: scale(1.05);
-    transition: 0.4s;
- }
+  .services-title h1 {
+    font-size: 36px;
+    text-align: center;
+  }
 
- @media(max-width:760px){
-    .services{
-      align-items: start;
-      gap: 70px;
-      margin: 20px 70px;
-    }
-    .services-title h1{
-      padding: 0;
-      font-size: 50px;
-    }
-    .services-format{
-      gap: 20px;
-      padding: 32px;
-    }
-    .services-format h2{
-      font-size: 20px;
+  .services-container {
+    grid-template-columns: 1fr;  /* ✅ single column for phones */
+    gap: 20px;
+    width: 100%;
+  }
 
-    }
-    .services-format p{
-      font-size: 18px;
-      line-height: 32px;
-      max-height: 300px;
-    }
-    .services-container{
-      grid-template-columns: 1fr 1fr;
-      gap: 30px;
-    }
- }
+  .services-format {
+    padding: 25px;
+    width: 75%;
+  }
+
+  .services-format h3 {
+    font-size: 20px;
+  }
+
+  .services-format h2 {
+    font-size: 22px;
+  }
+
+  .services-format p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+}
