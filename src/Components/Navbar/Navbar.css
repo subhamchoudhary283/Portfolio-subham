@@ -1,0 +1,119 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 50px;
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 25px;
+    font-size: 20px;
+}
+
+.nav-connect{
+    padding: 20px 40px;
+    border-radius: 50px;
+    background: rgb(141 0 195);
+    font-size: 22px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.nav-connect:hover{
+    transform: scale(1.05);
+}
+
+.subh{
+    font-family: "Archivo Black", sans-serif;
+    font-size: 30px;
+}
+
+.hero p{
+    width: 80%;
+    text-align: center;
+    font-size: 24px;
+    line-height: 40px;
+}
+
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.nav-menu p {
+  cursor: pointer;
+  padding: 5px 10px;
+  position: relative;
+}
+
+.nav-menu p::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0%;
+  height: 2px;
+  background-color: purple; 
+  transition: width 0.3s ease; 
+}
+
+.nav-menu p.active::after {
+  width: 100%; 
+}
+
+.al{
+  text-decoration: none;
+  color: white;
+}
+
+.nav-mob-close{
+  display: none;
+}
+
+.nav-mob-open{
+  display: none;
+}
+@media (max-width:760px) {
+  .navbar{
+    margin: 20px 50px;
+
+  }
+  .nav-connect{
+    display: none;
+  }
+
+  .nav-mob-open{
+    display: block;
+    position: fixed;
+    right: 30px;
+  }
+  .nav-mob-close{
+    display: block;
+    position: relative;
+    top: 30px;
+    left: 290px;
+    width: 30px;
+  }
+
+  .nav-menu{
+    position: fixed;
+    flex-direction: column;
+    align-items: start;
+    top: 0;
+    gap: 30px;
+    background-color: #1F0016;
+    width: 350px;
+    height: 100%;
+    z-index: 2;
+    transition: right 0.5s;
+    right: -350px;
+
+  }
+  
+  .nav-menu li{
+    font-size: 30px;
+    padding-left: 100px;
+    flex-direction: row;
+    gap: 20px;
+  }
+}
