@@ -169,8 +169,12 @@
   }
 
   .contact-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* ✅ centers everything */
     gap: 20px;
-    width: 90%;
+    width: 100%;
+    max-width: 700px;
   }
 
   .contact-right label {
@@ -192,6 +196,4 @@
   .social {
     justify-content: center;
   }
-  
-
 }

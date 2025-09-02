@@ -67,7 +67,7 @@ const Contact = () => {
                             <a href="https://www.instagram.com/subham_choudhary._._/?hl=en" target="_blank" rel="noopener noreferrer">
                                 <img src={instagram} alt="Instagram" />
                             </a>
-                        </div>
+                        </div> 
                     </div>
                 </div>
                 <form onSubmit={onSubmit} action="" className='contact-right'>
